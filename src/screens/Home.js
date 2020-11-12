@@ -6,11 +6,12 @@ import News from "../components/News"
 const StyledHome = styled.div``
 
 const Home = () => {
-    const NewsLeMonde = GetNewsLeMonde()
+    let NewsLeMonde = GetNewsLeMonde()
+
     return (
         <StyledHome>
             <News data={NewsLeMonde}></News>
-        </StyledHome>
+        </StyledHome >
     )
 }
 
