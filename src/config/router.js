@@ -8,7 +8,6 @@ import {
 import Home from '../screens/Home';
 import NewsDetails from "../screens/NewsDetails"
 import Error404 from "../screens/404";
-import MyComments from "../screens/MyComments"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
@@ -21,9 +20,6 @@ const RouterComponent = () => (
             </Route>
             <Route path="/news/:newsSources/:newsName">
                 <NewsDetails />
-            </Route>
-            <Route path="/myComments">
-                <MyComments />
             </Route>
             <Route path="*">
                 <Error404 />

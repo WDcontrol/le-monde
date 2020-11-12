@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { addToLocalStorageArray } from '../hooks/addToLocalStorageArray'
+import { addToComments } from '../helpers'
 
-const StyledCommentsAdd = styled.form``
-const StyledCommentsAddInput = styled.input``
-const StyledCommentsAddSubmit = styled.input``
+const StyledCommentsAdd = styled.form`
+    display:flex;
+    flex-direction: column;
+`
+const StyledCommentsAddInput = styled.input`
+    padding: 10px;
+    margin: 5px 0;
+`
+const StyledCommentsAddSubmit = styled.input`
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+`
 
 const CommentsAdd = props => {
 
@@ -13,7 +23,7 @@ const CommentsAdd = props => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addToLocalStorageArray(props.data.title, { name, comment })
+        addToComments(props.data.title, { name, comment })
         props.handleChange();
     }
 

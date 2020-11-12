@@ -4,7 +4,9 @@ import styled from 'styled-components'
 import CommentsAdd from './CommentsAdd'
 import CommentsList from './CommentsList'
 
-const StyledComments = styled.div``
+const StyledComments = styled.div`
+    margin : 5px;
+`
 const StyledCommentsTitle = styled.h2``
 
 const Comments = props => {
