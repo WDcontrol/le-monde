@@ -8,12 +8,12 @@ const StyledNews = styled.div`
 `
 
 const News = props => {
-    const { error, isLoading, response } = props.data
+    const { error, isLoading, news } = props.data
     return (
         <StyledNews>
             {error && <Error />}
             {isLoading && <Loader />}
-            {response && <NewsList data={response} />}
+            {news && <NewsList data={news} />}
         </StyledNews>
     )
 }

@@ -16,8 +16,9 @@ const NewsDetails = () => {
         <StyledNewsDetails>
             {error && <Error />}
             {isLoading && <Loader />}
-            {response &&
-                <NewsItem showDetails={true} data={response.articles[0]} />
+            {response?.message && <div>API LIMITATION</div>}
+            {response?.articles &&
+                <NewsItem showDetails={true} data={response?.articles[0]} />
             }
         </StyledNewsDetails>
     )
