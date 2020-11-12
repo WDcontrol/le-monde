@@ -11,7 +11,7 @@ const StyledNewsList = styled.div`
 const NewsList = props => {
     return (
         <StyledNewsList>
-            {props.data.articles.map((article, index) => (
+            {props.data.articles?.map((article, index) => (
                 <NewsItem showDetails={false} data={article} key={index} />
             ))}
         </StyledNewsList>
